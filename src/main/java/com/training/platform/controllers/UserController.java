@@ -1,5 +1,4 @@
-package com.training.platform.controllers;
-
+/*
 import com.training.platform.entities.User;
 import com.training.platform.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "")
-    public String index_All() {
+    public String indexAll() {
         List<User> users = userService.findAll();
         System.out.println("############### Find All User (In Console) ###############");
         System.out.println(users);
@@ -63,13 +62,13 @@ public class UserController {
     }
 
     @GetMapping(value = "/findA_CAA")
-    public List<User> index_CAA() {
+    public List<User> indexCAA() {
         List<User> users = userService.findByCityAndActiveAndAge("nakornpathom", 1, 18);
         return users;
     }
 
     @GetMapping(value = "/find_AgeI")
-    public List<User> index_AI(@RequestParam(name = "age") List<Integer> listAgeI) {
+    public List<User> indexAI(@RequestParam(name = "age") List<Integer> listAgeI) {
         return userService.findByAgeIn(listAgeI);
     }
-}
+}*/
